@@ -18,12 +18,12 @@ class OnboardingPage extends StatelessWidget {
           ),
           Expanded(child: Image.asset('assets/images/onboarding_image.png')),
           Text(
-            'Spend Smarter',
+            'Gaste Menos',
             textAlign: TextAlign.center,
             style: AppTextStyles.mediumText
                 .copyWith(color: AppColors.greenlightTwo),
           ),
-          Text('Save More',
+          Text('Poupe Mais',
               textAlign: TextAlign.center,
               style: AppTextStyles.mediumText
                   .copyWith(color: AppColors.greenlightTwo)),
@@ -31,7 +31,7 @@ class OnboardingPage extends StatelessWidget {
             padding: const EdgeInsets.only(
                 left: 32.0, right: 32.0, top: 16.0, bottom: 4.0),
             child: PrimaryButtom(
-              text: 'Get Started',
+              text: 'Iniciar',
               onPressed: () {},
             ),
           ),
@@ -39,10 +39,10 @@ class OnboardingPage extends StatelessWidget {
             // ignore: avoid_print
             onPressed: () => print('oi'),
             children: [
-              Text('Already have account? ',
+              Text('Já tem conta? ',
                   style:
                       AppTextStyles.smallText.copyWith(color: AppColors.grey)),
-              Text('Log In',
+              Text('Entrar',
                   style: AppTextStyles.smallText
                       .copyWith(color: AppColors.greenlightTwo)),
             ],
