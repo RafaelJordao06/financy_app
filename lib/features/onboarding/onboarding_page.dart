@@ -40,8 +40,8 @@ class OnboardingPage extends StatelessWidget {
             onPressed: () => print('oi'),
             children: [
               Text('Já tem conta? ',
-                  style:
-                      AppTextStyles.smallText.copyWith(color: AppColors.grey)),
+                  style: AppTextStyles.smallText
+                      .copyWith(color: AppColors.darkGrey)),
               Text('Entrar',
                   style: AppTextStyles.smallText
                       .copyWith(color: AppColors.greenlightTwo)),
