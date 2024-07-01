@@ -20,13 +20,12 @@ class OnboardingPage extends StatelessWidget {
           Text(
             'Gaste Menos',
             textAlign: TextAlign.center,
-            style: AppTextStyles.mediumText
-                .copyWith(color: AppColors.greenlightTwo),
+            style: AppTextStyles.mediumText.copyWith(color: AppColors.greenTwo),
           ),
           Text('Poupe Mais',
               textAlign: TextAlign.center,
-              style: AppTextStyles.mediumText
-                  .copyWith(color: AppColors.greenlightTwo)),
+              style:
+                  AppTextStyles.mediumText.copyWith(color: AppColors.greenTwo)),
           Padding(
             padding: const EdgeInsets.only(
                 left: 32.0, right: 32.0, top: 16.0, bottom: 4.0),
@@ -44,7 +43,7 @@ class OnboardingPage extends StatelessWidget {
                       .copyWith(color: AppColors.darkGrey)),
               Text('Entrar',
                   style: AppTextStyles.smallText
-                      .copyWith(color: AppColors.greenlightTwo)),
+                      .copyWith(color: AppColors.greenTwo)),
             ],
           ),
           const SizedBox(

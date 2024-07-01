@@ -1,5 +1,6 @@
 import 'package:financy_app/common/constants/app_colors.dart';
 import 'package:financy_app/common/constants/app_text_styles.dart';
+import 'package:financy_app/common/utils/uppercase_text_formatter.dart';
 import 'package:financy_app/common/widgets/custom_text_form_field.dart';
 import 'package:financy_app/common/widgets/multi_text_button.dart';
 import 'package:financy_app/common/widgets/password_form_field.dart';
@@ -17,26 +18,32 @@ class SignUpPage extends StatelessWidget {
         Text(
           'Start saving',
           textAlign: TextAlign.center,
-          style:
-              AppTextStyles.mediumText.copyWith(color: AppColors.greenlightTwo),
+          style: AppTextStyles.mediumText.copyWith(color: AppColors.greenTwo),
         ),
         Text('Your Money!',
             textAlign: TextAlign.center,
-            style: AppTextStyles.mediumText
-                .copyWith(color: AppColors.greenlightTwo)),
+            style:
+                AppTextStyles.mediumText.copyWith(color: AppColors.greenTwo)),
         Image.asset('assets/images/sign_up_image.png'),
-        const Form(
+        Form(
             child: Column(
           children: [
             CustomTextFormField(
               labelText: "Nome",
               hintText: "Enzo",
+              inputFormatters: [
+                UpperCaseTextInputFormatter(),
+              ],
             ),
-            PasswordFormField(
+            const CustomTextFormField(
+              labelText: "Email",
+              hintText: "enzo@email.com",
+            ),
+            const PasswordFormField(
               labelText: "Escolha sua senha",
               hintText: "********",
             ),
-            PasswordFormField(
+            const PasswordFormField(
               labelText: "Confirme sua senha",
               hintText: "********",
             ),
@@ -59,7 +66,7 @@ class SignUpPage extends StatelessWidget {
                     .copyWith(color: AppColors.darkGrey)),
             Text('Entrar',
                 style: AppTextStyles.smallText
-                    .copyWith(color: AppColors.greenlightTwo)),
+                    .copyWith(color: AppColors.greenTwo)),
           ],
         ),
       ],
