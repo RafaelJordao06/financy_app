@@ -70,6 +70,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     }
                     return null;
                   },
+                  helperText:
+                      "Deve ter pelo menos 8 caracteres, 1 letra maiúscula e 1 número",
                 ),
                 PasswordFormField(
                   labelText: "Confirme sua senha",

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:financy_app/common/constants/app_colors.dart';
 import 'package:financy_app/common/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +18,7 @@ class CustomTextFormField extends StatefulWidget {
   final bool? obscureText;
   final List<TextInputFormatter>? inputFormatters;
   final FormFieldValidator<String>? validator;
+  final String? helperText;
 
   const CustomTextFormField({
     super.key,
@@ -31,6 +34,7 @@ class CustomTextFormField extends StatefulWidget {
     this.obscureText,
     this.inputFormatters,
     this.validator,
+    this.helperText,
   });
 
   @override
@@ -41,12 +45,31 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   final defaultBorder = const OutlineInputBorder(
       borderSide: BorderSide(color: AppColors.greenTwo));
 
+  String? _helperText;
+
+  @override
+  void initState() {
+    super.initState();
+    _helperText = widget.helperText;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: widget.padding ??
           const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
       child: TextFormField(
+        onChanged: (value) {
+          if (value.length == 1) {
+            setState(() {
+              _helperText = null;
+            });
+          } else if (value.isEmpty) {
+            setState(() {
+              _helperText = widget.helperText;
+            });
+          }
+        },
         validator: widget.validator,
         style: AppTextStyles.inputText.copyWith(color: AppColors.greenOne),
         inputFormatters: widget.inputFormatters,
@@ -58,6 +81,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         textCapitalization:
             widget.textCapitalization ?? TextCapitalization.none,
         decoration: InputDecoration(
+            helperText: _helperText,
+            helperMaxLines: 3,
             suffixIcon: widget.suffixIcon,
             hintText: widget.hintText,
             hintStyle:
