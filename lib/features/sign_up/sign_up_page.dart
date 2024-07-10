@@ -4,6 +4,8 @@ import 'package:financy_app/common/constants/app_colors.dart';
 import 'package:financy_app/common/constants/app_text_styles.dart';
 import 'package:financy_app/common/utils/uppercase_text_formatter.dart';
 import 'package:financy_app/common/utils/validator.dart';
+import 'package:financy_app/common/widgets/custom_bottom_sheet.dart';
+import 'package:financy_app/common/widgets/custom_circular_progrees_indicator.dart';
 import 'package:financy_app/common/widgets/custom_text_form_field.dart';
 import 'package:financy_app/common/widgets/multi_text_button.dart';
 import 'package:financy_app/common/widgets/password_form_field.dart';
@@ -37,9 +39,7 @@ class _SignUpPageState extends State<SignUpPage> {
       if (_controller.state is SignUpLoadingState) {
         showDialog(
             context: context,
-            builder: (context) => const Center(
-                  child: CircularProgressIndicator(),
-                ));
+            builder: (context) => const CustomCircularProgressIndicator());
       }
       if (_controller.state is SignUpSuccessState) {
         Navigator.pop(context);
@@ -56,13 +56,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
       if (_controller.state is SignUpErrorState) {
         Navigator.pop(context);
-        showDialog(
-          context: context,
-          builder: (context) => const SizedBox(
-            height: 150.0,
-            child: Text("Erro ao Logar, Tente novamente."),
-          ),
-        );
+        customModalBottomSheet(context);
       }
     });
   }
