@@ -1,9 +1,12 @@
-import 'dart:developer';
-
 import 'package:financy_app/features/sign_up/sign_up_state.dart';
+import 'package:financy_app/services/auth_service.dart';
 import 'package:flutter/foundation.dart';
 
 class SignUpController extends ChangeNotifier {
+  final AuthService _service;
+
+  SignUpController(this._service);
+
   SignUpState _state = SignUpIntialgState();
 
   SignUpState get state => _state;
@@ -13,22 +16,22 @@ class SignUpController extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<bool> doSignUp() async {
+  Future<void> signUp({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
     _changeState(SignUpLoadingState());
     try {
-      await Future.delayed(const Duration(seconds: 2));
-
-      //throw Exception("Erro ao Logar");
-
-      // ignore: dead_code
-      log("Usuario criado com sucesso");
+      await _service.signUp(
+        name: name,
+        email: email,
+        password: password,
+      );
 
       _changeState(SignUpSuccessState());
-
-      return true;
     } catch (e) {
-      _changeState(SignUpErrorState());
-      return false;
+      _changeState(SignUpErrorState(e.toString()));
     }
   }
 }
