@@ -1,7 +1,9 @@
 import 'package:financy_app/common/constants/app_colors.dart';
 import 'package:financy_app/common/constants/app_text_styles.dart';
+import 'package:financy_app/common/constants/routes.dart';
 import 'package:financy_app/common/widgets/multi_text_button.dart';
 import 'package:financy_app/common/widgets/primary_button.dart';
+import 'package:financy_app/features/sign_up/sign_up_page.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -31,7 +33,12 @@ class OnboardingPage extends StatelessWidget {
                 left: 32.0, right: 32.0, top: 16.0, bottom: 4.0),
             child: PrimaryButtom(
               text: 'Iniciar',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  NamedRoutes.signUp,
+                );
+              },
             ),
           ),
           MultiTextButton(
