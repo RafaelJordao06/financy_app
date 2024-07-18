@@ -43,7 +43,10 @@ class OnboardingPage extends StatelessWidget {
           ),
           MultiTextButton(
             // ignore: avoid_print
-            onPressed: () => print('oi'),
+            onPressed: () => Navigator.pushNamed(
+              context,
+              NamedRoutes.signIn,
+            ),
             children: [
               Text('Já tem conta? ',
                   style: AppTextStyles.smallText

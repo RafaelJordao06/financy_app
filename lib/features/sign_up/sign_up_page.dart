@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:financy_app/common/constants/app_colors.dart';
 import 'package:financy_app/common/constants/app_text_styles.dart';
+import 'package:financy_app/common/constants/routes.dart';
 import 'package:financy_app/common/utils/uppercase_text_formatter.dart';
 import 'package:financy_app/common/utils/validator.dart';
 import 'package:financy_app/common/widgets/custom_bottom_sheet.dart';
@@ -144,7 +145,10 @@ class _SignUpPageState extends State<SignUpPage> {
         ),
         MultiTextButton(
           // ignore: avoid_print
-          onPressed: () => print('oi'),
+          onPressed: () => Navigator.popAndPushNamed(
+            context,
+            NamedRoutes.signIn,
+          ),
           children: [
             Text('Já tem conta? ',
                 style: AppTextStyles.smallText
