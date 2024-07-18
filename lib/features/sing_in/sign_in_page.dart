@@ -11,8 +11,8 @@ import 'package:financy_app/common/widgets/custom_text_form_field.dart';
 import 'package:financy_app/common/widgets/multi_text_button.dart';
 import 'package:financy_app/common/widgets/password_form_field.dart';
 import 'package:financy_app/common/widgets/primary_button.dart';
-import 'package:financy_app/features/sing_in/sing_in_controller.dart';
-import 'package:financy_app/features/sing_in/sing_in_state.dart';
+import 'package:financy_app/features/sing_in/sign_in_controller.dart';
+import 'package:financy_app/features/sing_in/sign_in_state.dart';
 import 'package:financy_app/services/mock_auth_service.dart';
 import 'package:flutter/material.dart';
 

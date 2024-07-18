@@ -1,4 +1,4 @@
-import 'package:financy_app/features/sing_in/sing_in_state.dart';
+import 'package:financy_app/features/sing_in/sign_in_state.dart';
 import 'package:financy_app/services/auth_service.dart';
 import 'package:flutter/foundation.dart';
 
