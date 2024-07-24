@@ -11,8 +11,9 @@ import 'package:financy_app/common/widgets/custom_text_form_field.dart';
 import 'package:financy_app/common/widgets/multi_text_button.dart';
 import 'package:financy_app/common/widgets/password_form_field.dart';
 import 'package:financy_app/common/widgets/primary_button.dart';
-import 'package:financy_app/features/sing_in/sign_in_controller.dart';
-import 'package:financy_app/features/sing_in/sign_in_state.dart';
+import 'package:financy_app/features/locator.dart';
+import 'package:financy_app/features/sign_in/sign_in_controller.dart';
+import 'package:financy_app/features/sign_in/sign_in_state.dart';
 import 'package:financy_app/services/mock_auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passWordController = TextEditingController();
-  final _controller = SingInController(MockAuthService());
+  final _controller = locator.get<SignInController>();
 
   @override
   void dispose() {
