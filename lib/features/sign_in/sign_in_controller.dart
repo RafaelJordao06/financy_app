@@ -1,11 +1,11 @@
-import 'package:financy_app/features/sing_in/sign_in_state.dart';
+import 'package:financy_app/features/sign_in/sign_in_state.dart';
 import 'package:financy_app/services/auth_service.dart';
 import 'package:flutter/foundation.dart';
 
-class SingInController extends ChangeNotifier {
+class SignInController extends ChangeNotifier {
   final AuthService _service;
 
-  SingInController(this._service);
+  SignInController(this._service);
 
   SingInState _state = SignInStateInitial();
 
