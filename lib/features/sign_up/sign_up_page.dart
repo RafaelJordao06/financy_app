@@ -14,7 +14,6 @@ import 'package:financy_app/common/widgets/primary_button.dart';
 import 'package:financy_app/features/locator.dart';
 import 'package:financy_app/features/sign_up/sign_up_controller.dart';
 import 'package:financy_app/features/sign_up/sign_up_state.dart';
-import 'package:financy_app/services/mock_auth_service.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {

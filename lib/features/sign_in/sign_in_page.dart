@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:financy_app/common/constants/app_colors.dart';
 import 'package:financy_app/common/constants/app_text_styles.dart';
 import 'package:financy_app/common/constants/routes.dart';
-import 'package:financy_app/common/utils/uppercase_text_formatter.dart';
 import 'package:financy_app/common/utils/validator.dart';
 import 'package:financy_app/common/widgets/custom_bottom_sheet.dart';
 import 'package:financy_app/common/widgets/custom_circular_progrees_indicator.dart';
@@ -14,7 +13,6 @@ import 'package:financy_app/common/widgets/primary_button.dart';
 import 'package:financy_app/features/locator.dart';
 import 'package:financy_app/features/sign_in/sign_in_controller.dart';
 import 'package:financy_app/features/sign_in/sign_in_state.dart';
-import 'package:financy_app/services/mock_auth_service.dart';
 import 'package:flutter/material.dart';
 
 class SignInPage extends StatefulWidget {
