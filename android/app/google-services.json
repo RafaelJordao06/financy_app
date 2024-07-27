@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "881481002899",
+    "project_id": "finance-app-126ab",
+    "storage_bucket": "finance-app-126ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881481002899:android:3e923c3342affc5ac6c266",
+        "android_client_info": {
+          "package_name": "com.rafael.financyapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmhKqybS09_h_9LHlv0b8BqHYobrHIOWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881481002899:android:5994bea7a440899fc6c266",
+        "android_client_info": {
+          "package_name": "jordan.financy.financy_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmhKqybS09_h_9LHlv0b8BqHYobrHIOWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

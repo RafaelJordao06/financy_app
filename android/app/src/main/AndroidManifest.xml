@@ -1,4 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jordan.financy.financy_app">
+
     <application
         android:label="financy_app"
         android:name="${applicationName}"
