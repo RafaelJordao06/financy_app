@@ -22,7 +22,7 @@ class SignUpController extends ChangeNotifier {
     required String email,
     required String password,
   }) async {
-    final secureStorage = SecureStorage();
+    const secureStorage = SecureStorage();
     _changeState(SignUpStateLoading());
     try {
       final user = await _service.signUp(
