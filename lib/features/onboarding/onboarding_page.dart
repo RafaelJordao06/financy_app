@@ -30,7 +30,7 @@ class OnboardingPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(
                 left: 32.0, right: 32.0, top: 16.0, bottom: 4.0),
-            child: PrimaryButtom(
+            child: PrimaryButton(
               text: 'Iniciar',
               onPressed: () {
                 Navigator.pushNamed(

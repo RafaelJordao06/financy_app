@@ -2,12 +2,12 @@ import 'package:financy_app/common/constants/app_colors.dart';
 import 'package:financy_app/common/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class PrimaryButtom extends StatelessWidget {
+class PrimaryButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String text;
 
   // ignore: use_super_parameters
-  const PrimaryButtom({Key? key, this.onPressed, required this.text})
+  const PrimaryButton({Key? key, this.onPressed, required this.text})
       : super(key: key);
 
   final BorderRadius _borderRadius =
