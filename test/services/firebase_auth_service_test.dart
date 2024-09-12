@@ -17,9 +17,9 @@ void main() {
   });
 
   group(
-    'Tests sign up',
+    'Tests Firebase Auth Service - Sign Up',
     () {
-      test('Teste sign up sucess', () async {
+      test('Should return created user', () async {
         when(
           () => mockFirebaseAuthService.signUp(
             name: 'User',
@@ -40,7 +40,7 @@ void main() {
         );
       });
 
-      test('Teste sign up failure', () async {
+      test('Should throw exception', () async {
         when(
           () => mockFirebaseAuthService.signUp(
             name: 'User',
@@ -60,4 +60,47 @@ void main() {
       });
     },
   );
+
+  group('Tests Firebase Auth Service - Sign In', () {
+    test('Should return user data', () async {
+      when(
+        () => mockFirebaseAuthService.signIn(
+          email: 'user@email.com',
+          password: 'user@123',
+        ),
+      ).thenAnswer(
+        (_) async => user,
+      );
+
+      final result = await mockFirebaseAuthService.signIn(
+        email: 'user@email.com',
+        password: 'user@123',
+      );
+
+      expect(
+        result,
+        user,
+      );
+    });
+
+    test('Should throw exception', () async {
+      when(
+        () => mockFirebaseAuthService.signIn(
+          email: 'user@email.com',
+          password: 'user@123',
+        ),
+      ).thenThrow(
+        Exception(),
+      );
+
+      expect(
+        () => mockFirebaseAuthService.signIn(
+          email: 'user@email.com',
+          password: 'user@123',
+        ),
+        // throwsA(isInstanceOf<Exception>()),
+        throwsException,
+      );
+    });
+  });
 }
